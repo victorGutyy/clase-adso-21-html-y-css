@@ -1,2 +1,65 @@
-body {background: rgb(197, 240, 205) ;}
-ul {list-style-type: none;}
+body {background: rgb(198, 240, 197);
+margin: 20px; ;
+font-family: original surfer, sans-serif;
+
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 27px;
+    font-weight: 600;
+    color: #03250d;
+    
+    }
+    
+
+header {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+nav ul {
+    background: rgb(157, 218, 170);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    padding: 2em 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+li {
+    margin: 1em 0;
+
+        &:nth-last-of-type(1) {
+        margin-bottom: 2em;
+        }
+    
+        a {
+        text-decoration: none;
+        color: #09451e;
+        font-size: 1.2rem;
+        font-weight: 600;
+
+        &:hover {
+            color: #25c510;
+            
+            }
+        }
+
+       
+    
+
+    }
