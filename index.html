@@ -31,7 +31,7 @@
             </a>
 
             <ul>
-                <li>
+                <li class="hide-desktop menu-close">
                     <a href="#">
                         <img src="SVG/close.png" alt="close Menu" height="20px">
                     </a>
@@ -66,5 +66,27 @@
     </div>
 
 </div>
+
+    <script>
+        const menu = document.querySelector('nav ul');
+        const menuBtn = document.querySelector('.menu-open');
+        const closeBtn = document.querySelector('.menu-close');
+
+        menuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            menu.classList.add('open');
+        });
+
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            menu.classList.remove('open');
+        });
+
+
+
+
+    </script>
+
+
 </body>
 </html>

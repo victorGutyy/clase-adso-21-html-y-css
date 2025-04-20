@@ -1,65 +1,159 @@
-body {background: rgb(198, 240, 197);
-margin: 20px; ;
-font-family: original surfer, sans-serif;
+/* Fuente moderna y minimalista */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
 
+body {
+    background-color: #f5f8f6;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    color: #111;
+    line-height: 1.6;
 }
 
 .wrap {
-    max-width: 1200px;
-    margin: 10px;
-    padding: 20px;
-    font-size: 27px;
-    font-weight: 600;
-    color: #03250d;
-    
-    }
-    
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
 header {
     display: flex;
     justify-content: space-between;
-    
-    
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-left a.home {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #00914b;
+    text-decoration: none;
 }
 
 nav ul {
-    background: rgb(157, 218, 170);
+    background: white;
     position: fixed;
     z-index: 999;
     top: 0;
     right: 0;
     height: 100vh;
-    padding: 2em 0;
+    width: 250px;
     margin: 0;
+    padding: 3rem 1rem;
     list-style: none;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 20%;
     display: flex;
     flex-direction: column;
-    
+    align-items: flex-start;
+    gap: 1.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.05);
 }
 
-li {
-    margin: 1em 0;
+nav ul.open {
+    transform: translateX(0);
+}
 
-        &:nth-last-of-type(1) {
-        margin-bottom: 2em;
-        }
-    
-        a {
-        text-decoration: none;
-        color: #09451e;
-        font-size: 1.2rem;
-        font-weight: 600;
+nav ul li a {
+    color: #222;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
 
-        &:hover {
-            color: #25c510;
-            
-            }
-        }
+nav ul li a:hover {
+    color: #00914b;
+}
 
-       
-    
+.menu-open img,
+.menu-close img {
+    cursor: pointer;
+}
 
+main {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    color: #022c1e;
+    margin-bottom: 0.5rem;
+}
+
+.subhead {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.primary-cta {
+    display: inline-block;
+    background-color: #b3e264;
+    color: #111;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.primary-cta:hover {
+    background-color: #91cc45;
+}
+
+.bike-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.bike img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    nav ul {
+        position: static;
+        height: auto;
+        flex-direction: row;
+        background: transparent;
+        transform: none;
+        box-shadow: none;
+        gap: 2rem;
     }
+
+    .menu-open,
+    .menu-close,
+    .hide-desktop {
+        display: none;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+
+    /* Mostrar en móvil y ocultar en desktop */
+.hide-desktop {
+    display: block;
+  }
+  
+  @media (min-width: 768px) {
+    .hide-desktop {
+      display: none;
+    }
+  }
+  
+}
